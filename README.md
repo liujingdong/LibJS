@@ -2,6 +2,7 @@
 ---
 目的:学习JS,建立JS库,方便以后调用
 
+
 示例:在word里面写的,有截图,你也可以直接点击indexShow.html看效果,这里我只写了一个mouseCount方法动画效果
 
  <!DOCTYPE html>
