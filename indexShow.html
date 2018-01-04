@@ -6,9 +6,54 @@
   <title>CrazyDongLibJs</title>
 </head>
     <body>
+
+        <div id="div">
+            <div class="div1">寒冰</div>
+            <div class="div1">安妮</div>
+            <div class="div1">瑞兹</div>
+            <div class="div1">阿木木</div>
+            <div class="div1">牛头</div>
+            <div class="div1">皇子</div>
+            <div class="div1">蛮王</div>
+            <div class="div1">女娲</div>
+            <div class="div1">后裔</div>
+            <div class="div1">日光女神</div>
+            <div class="div1">星妈</div>
+            <div class="div1">龙女</div>
+            <div class="div1">石头人</div>
+            <div class="div1">提莫</div>
+            <div class="div1">德玛</div>
+            <div class="div1">亚瑟</div>
+            <div class="div1">赵信</div>
+            <div class="div1">小法师</div>
+            <div class="div1">妲己</div>
+            <div class="div1">奥巴马</div>
+        </div>
         <script src='LibJS.js'></script>;
         <script>
-            mouseCount('0,0,255','0.7','-2','500');//整个页面添加画布实现鼠标移动吸引多个小点连接线段的动画效果
+            mouseCount('0,0,255','0.7','-2','99');//整个页面添加画布实现鼠标移动吸引多个小点连接线段的动画效果
+            window.onload = function () {
+                var div = document.getElementById('div');//获取父元素
+                var div1 = document.querySelectorAll('.div1');//获取子元素伪数组
+                for(var i = 0;i < div1.length; i++){
+                    // 鼠标移到div事件
+                    div1[i].onmouseover = function(){
+                        this.style.color = "#648513";
+                    }
+
+                    //鼠标离开div事件
+                    div1[i].onmouseleave = function(){
+                        this.style.color = "";
+                    }
+
+                    //鼠标点击事件
+                    div1[i].onclick = function(){
+                        alert(this.innerText);
+                    }
+                }
+                //oDiv 为要变动的父元素 oDivId为父元素id aA为要变动的数组 aAcn为变动的子元素classname
+                threeCloud(div,'div',div1,'div1');
+            }
         </script>
     </body>
 
